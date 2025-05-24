@@ -1,0 +1,673 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b4fc2;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    width: 100%;
+}
+
+/* Header */
+header, .hero, .services-container, .about-us, .contact-section {
+    max-width: 100%; /* Ensure content does not exceed viewport width */
+    overflow: hidden; /* Prevent overflowing elements */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 50px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Positions logo to the left and nav to the right */
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+    text-align: left;
+} 
+
+.logo h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo .highlight {
+    color: #2a2c2d;
+}
+
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    text-align: right;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* CTA Buttons styling */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn, .book-btn {
+    border: 2px solid #00BFFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00BFFF;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.book-btn {
+    background-color: #00BFFF;
+    color: white;
+}
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 50px;
+    color: rgb(0, 0, 0);
+}
+
+.hero-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+    color: #ffffff;
+    padding-right: 20px;
+    padding-bottom: 100px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+}
+
+.hero-image img {
+    max-width: 90%; /* Slightly reduce max-width for smaller screens */
+    height: auto;
+    border-radius: 10px; /* Retain rounded corners */
+    object-fit: contain; /* Ensures the image fits well inside its container */
+}
+
+.button-wrapper {
+    margin-top: 50px; /* Adjust this value as needed */
+}
+
+
+/* Consultation button */
+.btn-76,
+.btn-76 *,
+.btn-76 :after,
+.btn-76 :before,
+.btn-76:after,
+.btn-76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-76 {
+    margin-top: 300px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-76:disabled {
+  cursor: default;
+}
+.btn-76:-moz-focusring {
+  outline: auto;
+}
+.btn-76 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-76 [hidden] {
+  display: none;
+}
+.btn-76 {
+  --neon: #0ea5e9;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+.btn-76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+.btn-76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+.btn-76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+.btn-76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+.btn-76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+.btn-76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn-76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
+}
+
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        text-align: center;
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align items */
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .logo h1 {
+        font-size: 40px; /* Adjust logo text size */
+        margin-bottom: 10px; /* Add spacing between logo and navigation */
+    }
+
+    nav ul {
+        flex-direction: row; /* Ensure list items are in a single row */
+        justify-content: center; /* Center align the list */
+        gap: 10px; /* Adjust spacing between list items */
+        overflow-x: auto; /* Add horizontal scrolling if needed */
+        white-space: nowrap; /* Prevent wrapping of list items */
+    }
+
+    nav ul li {
+        margin: 0; /* Remove extra margins for consistent spacing */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        text-align: center; /* Ensure text is centered in each list item */
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust spacing between buttons */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;               /* Adjust height for smaller screens */
+        flex-direction: column;     /* Stack content vertically */
+        padding: 20px;              /* Reduce padding for better fit */
+    }
+
+    .hero-content {
+        flex-direction: column;     /* Stack the text and image vertically */
+        align-items: center;        /* Center-align content */
+        text-align: center;         /* Center-align text */
+    }
+
+    .hero-text {
+        padding: 10px 0;            /* Reduce padding */
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;            /* Scale down font size */
+        line-height: 1.3;           /* Adjust line height */
+    }
+
+    .hero-image {
+        margin-top: 20px;           /* Add spacing between text and image */
+    }
+
+    .hero-image img {
+        width: 90%;                 /* Scale image to fit screen width */
+        max-width: 400px;           /* Set a maximum width for the image */
+        height: auto;               /* Maintain aspect ratio */
+    }
+
+    body {
+        padding: 0; /* Remove unnecessary padding */
+        margin: 0; /* Align everything flush to edges */
+    }
+
+    .hero, .services-container, .about-us, .contact-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Services*/
+/* Container styling */
+.services-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.services-container h6 {
+    font-size: 16px;
+    color: #9E3FFD;
+    margin-bottom: 5px;
+}
+
+.services-container h4 {
+    font-size: 36px;
+    color: #16163F;
+    margin-bottom: 20px;
+}
+
+/* Column layout */
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Service card styling */
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(50% - 200px); /* Two cards per row with spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Image inside each card */
+.service-card img {
+    margin-bottom: 10px;
+}
+
+/* Title and description */
+.service-card h6 {
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+/* Read More link */
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2rem; /* Smaller font for hero section text */
+    }
+
+    .services-container h4 {
+        font-size: 1.5rem; /* Adjust service heading size */
+    }
+}
+
+
+
+/* About Section */
+.about-us {
+    padding: 50px;
+    background-color: #252528;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content .column1_0 h6 {
+    font-family: "Avenir", sans-serif;
+    font-size: 26px;
+    color: #9180ff;
+    margin-bottom: 25px;
+}
+
+.about-content .column1_0 h4{
+    color: #58585a;
+    font-family: "Work Sans Semi Bold", sans-serif;
+    font-size: 36px; 
+    margin-bottom: 25px;   
+}
+
+.about-content .column1_0 p{
+    font-family: "Avenir Light";
+    font-size: 23px;
+    color: #f8f8f8;
+}
+
+.column1_0 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.column2 {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling */
+.column2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stacks the content vertically */
+        align-items: flex-start; /* Ensures left alignment for all items */
+        text-align: left; /* Left-aligns text within the content */
+        gap: 20px; /* Adds spacing between stacked elements */
+    }
+
+    .column1_0, .column2 {
+        width: 100%; /* Makes both columns span full width */
+        text-align: left; /* Left-aligns text inside each column */
+    }
+
+    .column2 img {
+        max-width: 100%; /* Ensures the image fits within the screen */
+        height: auto; /* Maintains aspect ratio */
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #00BFFF;
+}
+
+.column1 {
+    flex: 1;
+    padding-right: 30px;
+    color: #000000;
+}
+
+.column2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: black; /* Set font color to black */
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: black; /* Set font color to black for inputs and textareas */
+}
+
+.contact-section form button {
+    padding: 10px;
+    background-color: #7e5af7;
+    color: black; /* Ensure button text color is black */
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.contact-section form button:hover {
+    background-color: #5a47c4; /* Darker shade for hover */
+}
+
+.social-bar{
+    display: flex;
+    align-items: center;
+    gap: 15px;    
+}
+
+.social-bar a img {
+    margin-top: 30px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.contact-section .column1 h6 {
+    font-family: "Avenir", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 15px
+}
+
+.contact-section .column1 h4 {
+    font-family: "Work Sans Semi Bold", sans-serif;
+    font-size: 36px;
+    color: #16163F;
+    margin-bottom: 15px
+}
+
+.contact-section .column1 p {
+    font-family: "Avenir Light";
+    font-size: 18px;
+    color: #16163F;
+    margin-bottom: 15px
+}
+
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    background-color: #333;
+    color: #fff;
+    border-top: 2px solid #444; /* Adds a subtle border for better design */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;   /* Center align the content */
+        padding: 20px;         /* Reduce padding for smaller screens */
+    }
+
+    .contact-section .column1,
+    .contact-section .column2 {
+        width: 100%;           /* Take full width of the screen */
+        padding: 0;            /* Remove extra padding */
+        text-align: center;    /* Center align the text */
+    }
+
+    .contact-section form {
+        width: 90%;            /* Reduce form width for better fit */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section form input,
+    .contact-section form textarea {
+        font-size: 1rem;       /* Increase font size for readability */
+        padding: 10px;         /* Maintain padding for touch targets */
+    }
+
+    .contact-section form button {
+        width: 100%;           /* Ensure the button spans the full width */
+        padding: 12px;         /* Adjust padding for better touch interaction */
+    }
+}
+
+@media (max-width: 768px) {
+    .social-bar {
+        flex-direction: column; /* Stack social icons vertically */
+        gap: 10px;              /* Reduce spacing between icons */
+    }
+
+    .social-bar a img {
+        margin: 0 auto;         /* Center-align icons */
+        width: 30px;            /* Reduce size for smaller screens */
+        height: 30px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+
